@@ -16,6 +16,10 @@ def main():
 def about():
     return render_template('about.html')
 
+@app.route('/favorite')
+def favorite():
+    return render_template('favorite.html')
+
 
 
 
