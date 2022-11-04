@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}
+Add product
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Add product</h1>
+    <form method="post">
+    <input type="text" name="title" id="title" class="form-control" placeholder="title"><br>
+    <textarea name="text" id="text" class="form-control" placeholder="text"></textarea><br>
+    <input type="text" name="category" id="category" class="form-control" placeholder="category"><br>
+    <input type="integer" name="price" id="price" class="form-control" placeholder="price $"><br>
+    <input type="submit" class="gap-2 col-3 btn btn-outline-primary" value="Add product">
+    </form>
+</div>
+{% endblock %}

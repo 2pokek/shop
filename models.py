@@ -8,4 +8,4 @@ class product(db.Model):
     text = db.Column(db.Text,nullable=False)
     category = db.Column(db.String(50),nullable=False)
     price =db.Column(db.Integer,nullable=False)
-    isActive =db.Column()
+    isActive =db.Column(db.Boolean,default=True)
