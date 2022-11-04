@@ -1,7 +1,12 @@
 from flask import Flask,render_template
+from flask_sqlalchemy import SQLAlchemy
+from models import db
+
 
 app=Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///shop.sqlite3.db'
 
+db.init_app(app)
 
 @app.route('/create')
 def create():
@@ -20,6 +25,9 @@ def about():
 def favorite():
     return render_template('favorite.html')
 
+@app.route('/add')
+def add():
+    return render_template('add.html')
 
 
 
